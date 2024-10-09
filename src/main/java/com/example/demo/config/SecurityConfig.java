@@ -114,7 +114,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //		configuration.setAllowedOrigins(Arrays.asList("https://10.10.13.152:8080"));
 //          configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
 		configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
-//		configuration.setAllowedOrigins(Arrays.asList("https://rms.awashbank.com:443"));
+//		configuration.setAllowedOrigins(Arrays.asList("https://rms..com:443"));
 
 		configuration.setAllowedMethods(Arrays.asList("HEAD", "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
 		configuration.setAllowedHeaders(Collections.singletonList("*"));
