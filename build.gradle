@@ -1,0 +1,122 @@
+
+
+plugins {
+	id 'java'
+	id 'war'
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.example'
+version = '0.0.1'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+		// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.7.5'
+	
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson
+//	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
+	
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
+	//implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+	
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl
+	//runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+	
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-json
+	//implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json', version: '2.7.5'
+	
+		// https://mvnrepository.com/artifact/org.json/json
+	implementation group: 'org.json', name: 'json', version: '20220320'
+	
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+	
+		// https://mvnrepository.com/artifact/commons-io/commons-io
+	implementation 'commons-io:commons-io:2.11.0'
+	
+	// https://mvnrepository.com/artifact/com.auth0/java-jwt
+implementation 'com.auth0:java-jwt:4.2.1'
+
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
+implementation 'org.springframework.boot:spring-boot-starter-mail:2.7.4'
+
+// https://mvnrepository.com/artifact/javax.mail/mail
+//implementation 'javax.mail:mail:1.5.0-b01'
+// https://mvnrepository.com/artifact/javax.mail/mail
+  //////////implementation 'javax.mail:mail:1.4.7'
+
+//implementation 'com.twilio.sdk:twilio:8.24.0'
+
+// https://mvnrepository.com/artifact/eu.bitwalker/UserAgentUtils
+//implementation group: 'eu.bitwalker', name: 'UserAgentUtils', version: '1.21'
+
+// https://mvnrepository.com/artifact/com.github.darrachequesne/spring-data-jpa-datatables
+//implementation group: 'com.github.darrachequesne', name: 'spring-data-jpa-datatables', version: '6.0.0'
+
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+//implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.2'
+
+// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+//implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+
+//for datatables-serverside
+//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//implementation 'org.hibernate:hibernate-core'
+//implementation 'org.hibernate:hibernate-entitymanager'
+//implementation 'com.github.darrachequesne:spring-data-jpa-datatables:5.1.0'
+//implementation 'com.github.javafaker:javafaker:1.0.2'
+
+
+//for excell manipulation
+
+//implementation 'org.molgenis:molgenis-data-excel:8.4.5'
+//7.2.11
+// https://mvnrepository.com/artifact/org.molgenis/molgenis-data-excel
+implementation 'org.molgenis:molgenis-data-excel:8.0.4'
+
+//implementation 'com.baggonius.gson:guava-gson-serializers:1.0.1'
+//implementation 'com.github.acebaggins:gson-serializers:1.0.1'
+
+//reports
+// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports
+//implementation 'net.sf.jasperreports:jasperreports:6.20.0'
+// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports
+//implementation 'net.sf.jasperreports:jasperreports:4.0.0'
+
+// https://mvnrepository.com/artifact/com.github.librepdf/openpdf
+implementation 'com.github.librepdf:openpdf:1.3.30'
+//qr code
+// https://mvnrepository.com/artifact/com.google.zxing/core
+implementation 'com.google.zxing:core:3.5.1'
+// https://mvnrepository.com/artifact/com.google.zxing/javase
+implementation 'com.google.zxing:javase:3.5.1'
+
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
